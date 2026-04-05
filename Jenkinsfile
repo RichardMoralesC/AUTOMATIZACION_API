@@ -11,9 +11,9 @@ pipeline {
         }
 
         stage('Ejecutar pruebas') {
-            steps {
-                sh 'mvn clean test'
-            }
+            tools {
+    maven 'Maven-3'
+}
         }
 
        stage('Publicar reporte HTML') {
