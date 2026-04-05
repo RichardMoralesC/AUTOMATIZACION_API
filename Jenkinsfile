@@ -15,15 +15,18 @@ pipeline {
             }
         }
 
-        stage('Publicar reporte HTML') {
-            steps {
-                publishHTML([
-                    reportDir: 'target/karate-reports',
-                    reportFiles: 'karate-summary.html',
-                    reportName: 'Karate Report'
-                ])
-            }
-        }
+       stage('Publicar reporte HTML') {
+    steps {
+        publishHTML([
+            allowMissing: false,
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            reportDir: 'target/karate-reports',
+            reportFiles: 'karate-summary.html',
+            reportName: 'Karate Report'
+        ])
+    }
+}
 
         stage('Resultados JUnit') {
             steps {
