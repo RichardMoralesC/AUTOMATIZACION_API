@@ -5,7 +5,8 @@ pipeline {
 
         stage('Clonar código') {
             steps {
-                git 'https://github.com/RichardMoralesC/AUTOMATIZACION_API.git'
+                        git branch: 'main', url: 'https://github.com/RichardMoralesC/AUTOMATIZACION_API.git'
+
             }
         }
 
