@@ -12,7 +12,7 @@ pipeline {
 
         stage('Ejecutar pruebas') {
             tools {
-    maven 'Maven-3'
+    maven 'Maven3'
 }
         }
 
